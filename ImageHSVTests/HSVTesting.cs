@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace ImageHSVTests
 {
-    class Program
+    class HSVTesting
     {
         static void Main(string[] args)
         {

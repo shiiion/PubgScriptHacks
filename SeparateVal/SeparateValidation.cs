@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeparateVal
 {
-    class Program
+    class SeparateValidation
     {
         static List<int> RandomNoRepeat(int rnCount, int maxVal)
         {

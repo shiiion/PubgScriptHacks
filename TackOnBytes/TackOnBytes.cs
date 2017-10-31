@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TackOnBytes
 {
-    class Program
+    class TackOnBytes
     {
         static void Main(string[] args)
         {
@@ -14,9 +14,10 @@ namespace TackOnBytes
             byte[] magicNumber = { (byte)'n', (byte)'p', (byte)'e', (byte)'t', (byte)'t', (byte)'i', (byte)'s', (byte)'g', (byte)'a', (byte)'y' };
 
             
-            tackItOn = System.IO.File.ReadAllBytes(@"C:\Users\chewycrashburn\Source\Repos\learn-guns\Release\model2.cnn");
+            tackItOn = System.IO.File.ReadAllBytes(@"C:\Users\chewycrashburn\Source\Repos\learn-guns\Release\modelshort.cnn");
             tackItOnTo = System.IO.File.ReadAllBytes(@"C:\Users\chewycrashburn\Source\Repos\learn-guns\Release\learn-guns.exe");
-            tackItOn = Array.FindAll(tackItOn, (b) => b != '\r').ToArray();
+            //only use this for string!!
+            //tackItOn = Array.FindAll(tackItOn, (b) => b != '\r').ToArray();
 
             byte[] result = new byte[tackItOnTo.LongLength + tackItOn.LongLength + magicNumber.LongLength];
 
@@ -24,7 +25,7 @@ namespace TackOnBytes
             magicNumber.CopyTo(result, tackItOnTo.LongLength);
             tackItOn.CopyTo(result, tackItOnTo.LongLength + magicNumber.LongLength);
 
-            System.IO.File.WriteAllBytes(@"C:\Users\chewycrashburn\Source\Repos\learn-guns\Release\learn-guns-expanded.exe", result);
+            System.IO.File.WriteAllBytes(@"C:\Users\chewycrashburn\Source\Repos\learn-guns\Release\learn-guns.exe", result);
         }
     }
 }

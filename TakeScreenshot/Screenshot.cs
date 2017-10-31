@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace TakeScreenshot
 {
-    class Program
+    class Screenshot
     {
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(Keys vKey);
